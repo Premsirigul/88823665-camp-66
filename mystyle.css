@@ -1,15 +1,12 @@
 
-body{
+/* body{
     background: linear-gradient(#CCFFFF,#CC99FF);
-}
+} */
 h1{
     font-size: 20pt;
-    color: red;
+    color: green;
 }
 table{
     font-family: "K2D", sans-serif;
     color: black;
-}
-#FirstName:hover{
-    background:  rgb(23, 0, 128);
 }
