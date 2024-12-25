@@ -16,12 +16,20 @@
                         <div class="h2 col text-end">
                             <?php 
                             echo "2 x" .$i ."=";
-                            echo "<dv>";
+                            echo "<br>";
                             ?>
                         </div>
                         <div class= "h2 col text-start">
-
+                            <?php
+                            $my_var = 2;
+                           
+                                echo $my_var * $i;
+                                echo "<br>";
+                            
+                            ?>
                         </div>
+
+                    </div>
                             
                         
                 
