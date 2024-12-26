@@ -17,14 +17,12 @@
                 <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["number"])) {
                 $number = intval($_POST["number"]); // รับค่าแม่สูตรคูณจากฟอร์ม
-                
-                echo "<h2>สูตรคูณแม่ $number</h2>";
-                echo "<div class='row'>";
+                $number = intval($_POST["number"]); // รับค่าแม่สูตรคูณจากฟอร์ม
+                echo "<h2 class='mt-4'>สูตรคูณแม่ $number</h2>";
+                echo "<div class='d-flex flex-column align-items-center'>";
                 for ($i = 1; $i <= 12; $i++) {
                     $result = $number * $i;
-                    
-                    echo "$number x $i = $result";
-                    echo "</div>";
+                    echo "<div class='mb-1'>$number x $i = $result</div>";
                 }
                 echo "</div>";
             }
