@@ -1,15 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MyController;
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/hello', function () {
-    return "<h1>Hello World</h1>";
-});
-Route::get("/mycontroller/{id?}",
-[MyController::class,'myfunction']);
+use App\Http\Controllers;
+use App\Http\Controllers\Mycontroller;
 
-Route::post("/mycontroller/{id?}",
-[MyController::class,'myfunction']);
+Route::get('/mycontroller/{id?}', [Mycontroller::class, 'myfunction']); //ดึงค่าที่รับเข้ามาไปใช้ใน myfunction ในคลาส controller จะเห็นข้อมูลที่ส่งไปบน path
+
+Route::post('/mycontroller/{id?}', [Mycontroller::class, 'myfunction']); //ดึงค่าที่รับเข้ามาไปใช้ใน myfunction ในคลาส controller
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/hello', function () {
+//     return "<h1>Hello World!</h1>";
+// });
+
+// Route::get('/hello{id?}',function ($val=""){
+//     return "<h1>Hello World $val</h1>";
+// });
