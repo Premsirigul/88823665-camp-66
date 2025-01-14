@@ -8,6 +8,10 @@ Route::get('/mycontroller/{id?}', [Mycontroller::class, 'myfunction']); //ดึ
 
 Route::post('/mycontroller/{id?}', [Mycontroller::class, 'myfunction']); //ดึงค่าที่รับเข้ามาไปใช้ใน myfunction ในคลาส controller
 
+Route::get('/',function(){
+    return view('layouts.default');
+});
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
