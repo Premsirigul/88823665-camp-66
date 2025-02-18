@@ -14,20 +14,24 @@
         </div>
         <div class="card-body login-card-body">
           <p class="login-box-msg">Sign in to start your session</p>
-          <form action="../index3.html" method="post">
+        <?php
+          $error =session('error');
+          echo"<h4 class='text-danger'>".$error."</h4>";
+        ?>
+          <form action="{{ url('/login')}}" method="post">
+            @csrf
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="loginEmail" type="email" class="form-control" value="" placeholder="" />
+                <input id="loginEmail" type="email" name ="email" class="form-control" value="" placeholder="" />
                 <label for="loginEmail">Email</label>
               </div>
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="loginPassword" type="password" class="form-control" placeholder="" />
-                <label for="loginPassword">Password</label>
-              </div>
-              <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+                <input id="loginPassword" type="password" name = "password"class="form-control" placeholder="" />
+                <label for="loginPassword">Password</label></div>
+                <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             <!--begin::Row-->
             <div class="row">
@@ -49,7 +53,7 @@
           </form>
          
           <!-- /.social-auth-links -->
-          <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
+         
           <p class="mb-0">
             <a href="register.html" class="text-center"> Register a new membership </a>
           </p>

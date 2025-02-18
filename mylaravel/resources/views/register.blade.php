@@ -102,29 +102,31 @@ function myfunction() {
   }
   
    // ตรวจสอบอีเมลว่ามี @ และ . หรือไม่
-   let emailPattern = /@.*\./;
-            if (!emailPattern.test(email)) {
-                $('#email').addClass('is-invalid');
-                $('#invalid-email').html("<b><u>กรุณากรอกอีเมลให้ถูกต้อง</u></b>");
-                return false;
-            } else {
+   let emailPattern = @.;
+      if (!emailPattern.test(email)) {
+        $('#email').addClass('is-invalid');
+        $('#invalid-email').html("<b><u>กรุณากรอกอีเมลให้ถูกต้อง</u></b>");
+          return false;
+      }
+       else {
                 $('#email').removeClass('is-invalid');
-            }
+      }
 
-            let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]+$/;
-            if (!passwordPattern.test(pass)) {
-                $('#pass').addClass('is-invalid');
-                $('#invalid-pass').html("<b><u>รหัสผ่านจะต้องประกอบไปด้วย a-z, A-Z, 0-9</u></b>");
-                return false;
-            } else {
-                $('#pass').removeClass('is-invalid');
-            }
+    let passwordPattern = ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]+$/;
+       if (!passwordPattern.test(pass)) {
+         $('#pass').addClass('is-invalid');
+         $('#invalid-pass').html("<b><u>รหัสผ่านจะต้องประกอบไปด้วย a-z, A-Z, 0-9</u></b>");
+            return false;
+        } 
+        else {
+         $('#pass').removeClass('is-invalid');
+        }
 
             // เช็คว่า checkbox ถูกติ๊กมั้ย
-            if (!mycheckbox) {
-                $('mycheckbox').addClass('is-invalid');
-                alert('กรุณายอมรับข้อกำหนด');
-                return false;
+        if (!mycheckbox) {
+           $('mycheckbox').addClass('is-invalid');
+             alert('กรุณายอมรับข้อกำหนด');
+             return false;
             }
 
             return true;

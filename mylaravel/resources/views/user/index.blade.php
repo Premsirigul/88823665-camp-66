@@ -1,15 +1,9 @@
 @extends('layouts.default_with_menu')
 
 @section('content')
-    <style>
-        table tbody tr:hover td {
-            /*ใช้กับตารางที่มี tbody เมื่อเอาเม้าส์ไปวางที่แถวข้อมูลทั้งแถวนั้นที่มีเม้าส์วางจะเปลี่ยนสี*/
-            color: hotpink;
-            transition: color 0.3s ease-in-out;
-            /* ระยะเวลาการเปลี่ยนสี + ทำให้สีค่อยๆเปลี่ยนแบบสวยๆ */
-        }
-    </style>
 
+    
+<h1>{{session('user')->name}}</h1> 
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-12">
@@ -59,6 +53,7 @@
             {{-- /.card --}}
         </div>
     </div>
+
 @endsection
 
 @section('scripts')
